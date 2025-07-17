@@ -26,7 +26,7 @@ services:
           type: postgres
           property: host
       - key: YOURLS_SITE
-        value: https://shanurl.onrender.com
+        value: https://shan-url.onrender.com
       - key: YOURLS_USER
         value: admin
       - key: YOURLS_PASS
