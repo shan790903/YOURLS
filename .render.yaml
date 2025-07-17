@@ -26,11 +26,11 @@ services:
           type: postgres
           property: host
       - key: YOURLS_SITE
-        value: https://yourls-service.onrender.com
+        value: https://shanurl.onrender.com
       - key: YOURLS_USER
-        value: your_admin_username
+        value: admin
       - key: YOURLS_PASS
-        value: your_admin_password
+        value: Abc123456
 
 databases:
   - name: yourls-db
