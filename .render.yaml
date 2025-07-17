@@ -1,0 +1,37 @@
+services:
+  - type: web
+    name: yourls-service
+    env: docker
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: YOURLS_DB_USER
+        fromService:
+          name: yourls-db
+          type: postgres
+          property: user
+      - key: YOURLS_DB_PASS
+        fromService:
+          name: yourls-db
+          type: postgres
+          property: password
+      - key: YOURLS_DB_NAME
+        fromService:
+          name: yourls-db
+          type: postgres
+          property: database
+      - key: YOURLS_DB_HOST
+        fromService:
+          name: yourls-db
+          type: postgres
+          property: host
+      - key: YOURLS_SITE
+        value: https://yourls-service.onrender.com
+      - key: YOURLS_USER
+        value: your_admin_username
+      - key: YOURLS_PASS
+        value: your_admin_password
+
+databases:
+  - name: yourls-db
+    plan: free
